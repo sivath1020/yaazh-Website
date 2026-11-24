@@ -1,0 +1,32 @@
+.yaazh-chat { position: fixed; top: 88px; right: 28px; z-index: 55; width: min(405px, calc(100vw - 32px)); max-height: min(650px, calc(100dvh - 104px)); display: flex; flex-direction: column; overflow: hidden; border: 1px solid #dde5f0; border-radius: 19px; background: #fff; color: #142640; box-shadow: 0 20px 65px #0a25582b; font-family: 'Plus Jakarta Sans', sans-serif; }
+.yaazh-chat__header { display: flex; align-items: center; gap: 12px; padding: 20px; background: #0a2558; color: #fff; flex-shrink: 0; }
+.yaazh-chat__mark { display: grid; place-items: center; width: 42px; height: 42px; background: #ffffff16; border: 1px solid #ffffff25; border-radius: 12px; }
+.yaazh-chat__bot-icon { width: 28px; height: 28px; object-fit: contain; filter: brightness(0) invert(1); }
+.yaazh-chat__header h2 { font-size: 15px; font-weight: 700; }
+.yaazh-chat__header p { font-size: 10px; color: #c3d5f3; margin-top: 4px; }
+.yaazh-chat__header > button { margin-left: auto; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; }
+.yaazh-chat__header > button:hover { background: #ffffff20; }
+.yaazh-chat__conversation { padding: 24px 20px; overflow-y: auto; overscroll-behavior: contain; min-height: 150px; flex: 1; background: linear-gradient(#f7faff, #fff 180px); }
+.yaazh-chat__welcome > span { color: #0052cc; font-size: 9px; font-weight: 800; letter-spacing: .13em; }
+.yaazh-chat__welcome h3 { font-size: 22px; font-weight: 750; letter-spacing: -.035em; margin: 10px 0; line-height: 1.3; }
+.yaazh-chat__welcome p { font-size: 12px; color: #667387; line-height: 1.8; }
+.yaazh-chat__suggestions { display: grid; gap: 9px; margin-top: 22px; }
+.yaazh-chat__suggestions button { display: flex; align-items: center; justify-content: space-between; gap: 14px; text-align: left; background: #fff; border: 1px solid #e0e7f2; border-radius: 9px; padding: 12px; font-size: 11px; color: #244571; cursor: pointer; }
+.yaazh-chat__suggestions button:hover { background: #eef5ff; }
+.yaazh-chat__message { width: fit-content; max-width: 91%; font-size: 12px; line-height: 1.8; padding: 12px 14px; margin-top: 16px; border-radius: 12px 12px 12px 3px; background: #f0f4fa; white-space: pre-wrap; overflow-wrap: anywhere; }
+.yaazh-chat__message--user { margin-left: auto; border-radius: 12px 12px 3px 12px; background: #0052cc; color: #fff; }
+.yaazh-chat__thinking { display: flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 11px; color: #667387; }
+.yaazh-chat__error { background: #fff4ef; border: 1px solid #f6d5c5; color: #873719; padding: 12px; margin-top: 18px; font-size: 11px; line-height: 1.8; border-radius: 9px; }
+.yaazh-chat__composer { border-top: 1px solid #e4eaf2; padding: 14px; flex-shrink: 0; }
+.yaazh-chat__composer form { display: flex; gap: 10px; align-items: end; padding: 10px; border: 1px solid #d9e2ef; border-radius: 11px; }
+.yaazh-chat__composer form:focus-within { border-color: #0052cc; box-shadow: 0 0 0 2px #0052cc12; }
+.yaazh-chat__composer textarea { flex: 1; min-width: 0; resize: none; font-size: 12px; line-height: 1.6; background: transparent; color: #142640; outline: none; }
+.yaazh-chat__composer form > button { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 8px; background: #0052cc; color: #fff; cursor: pointer; flex-shrink: 0; }
+.yaazh-chat__composer button:disabled { background: #e8edf5; color: #8997aa; cursor: not-allowed; }
+.yaazh-chat__fineprint { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 11px; font-size: 8px; color: #8290a2; }
+.yaazh-chat__fineprint > button { color: #0052cc; cursor: pointer; font-size: 9px; }
+.yaazh-chat :is(button, textarea):focus-visible { outline: 2px solid #82b1ff; outline-offset: 3px; }
+.yaazh-chat__spinner { animation: chat-spin 1s linear infinite; }
+@keyframes chat-spin { to { transform: rotate(360deg); } }
+@media (max-width: 600px) { .yaazh-chat { right: 12px; top: 86px; width: calc(100vw - 24px); max-height: calc(100dvh - 100px); } }
+@media (prefers-reduced-motion: reduce) { .yaazh-chat__spinner { animation: none; } }

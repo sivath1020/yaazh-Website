@@ -1,0 +1,17 @@
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^brochures?/?$ /services [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+(services|about|work|contact|careers|digital-marketing-company-coimbatore|website-development-coimbatore|software-development-coimbatore|partners)\.html[\s?] [NC]
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+  RewriteRule ^(services|about|work|contact|careers|digital-marketing-company-coimbatore|website-development-coimbatore|software-development-coimbatore|partners)/+$ /$1 [R=301,L]
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^(services|about|work|contact|careers|digital-marketing-company-coimbatore|website-development-coimbatore|software-development-coimbatore|partners)$ $1.html [L]
+</IfModule>
+

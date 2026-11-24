@@ -1,0 +1,4 @@
+Tool: built-in image_gen (image edit).
+Edit target: member5.jpg (Sivath).
+Use case: identity-preserve / background-extraction.
+Create a high resolution clean photographic cutout for his existing team website portrait. Preserve his exact facial identity, facial proportions, natural skin tone, hairstyle, slight moustache, calm expression, frontal gaze, black button-up shirt with two flap chest pockets and white pocket buttons. Improve clarity and reduce compression artifacts without beautification or altering age, face or clothing. Remove only the brick doorway and background. Genuine transparent alpha background, no shadow, no text, no new objects. Keep original head-and-torso framing and pose, including the arm continuing out of the right frame. Subject aligned center, minimal transparent margins. Natural sharp photographic detail.

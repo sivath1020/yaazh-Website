@@ -1,0 +1,360 @@
+.aspire-case-study {
+  --header-height: 76px;
+  --aspire-blue: #075ead;
+  --aspire-green: #137447;
+  --aspire-orange: #a4430c;
+  --aspire-rule: #d7e2eb;
+  padding-top: var(--header-height);
+  color: #142547;
+  background: linear-gradient(180deg, #edf4f8, #f8fafc 42%, #edf4f8);
+}
+
+.aspire-case-study__content {
+  width: min(90%, 1320px);
+  margin-inline: auto;
+  padding-bottom: clamp(40px, 6vw, 92px);
+}
+
+.aspire-case-study__hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-height: calc(100dvh - var(--header-height));
+  aspect-ratio: 2.9;
+  background: linear-gradient(90deg, #daf1fd, #c8eafc 25%, #71cdfd 50%, #60c8fb 75%, #53c4fe);
+}
+
+.aspire-case-study__hero-artwork {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  mask-image: linear-gradient(180deg, transparent, black 3%);
+}
+
+.aspire-case-study__hero-copy {
+  width: 57%;
+  padding: clamp(18px, 2vw, 30px) 0 6% 4.4%;
+}
+
+.aspire-case-study__hero h1 {
+  margin-top: clamp(44px, 5vw, 80px);
+  font-size: clamp(1.8rem, 3.91vw, 3.65rem);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.aspire-case-study__hero h1 span {
+  display: block;
+  color: var(--aspire-blue);
+}
+
+.aspire-case-study__intro {
+  max-width: min(39ch, 68%);
+  margin-top: 15px;
+  color: #364359;
+  font-size: clamp(.86rem, 1.28vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.aspire-case-study__dashboards {
+  display: grid;
+  gap: clamp(28px, 4vw, 64px);
+  padding-top: clamp(48px, 7vw, 104px);
+}
+
+.aspire-case-study__section-intro {
+  text-align: center;
+}
+
+.aspire-case-study__section-intro::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 0 auto 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--aspire-blue) 50%, var(--aspire-green) 50%);
+}
+
+.aspire-case-study__section-title {
+  font-size: clamp(1.55rem, 3.1vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+.aspire-case-study__section-intro p {
+  max-width: 52ch;
+  margin: 12px auto 0;
+  color: #364359;
+  font-size: clamp(.9rem, 1.3vw, 1.05rem);
+  line-height: 1.5;
+}
+
+.aspire-case-study__card {
+  --card-accent: var(--aspire-blue);
+  --preview-offset: -20px;
+  display: grid;
+  grid-template-areas: 'preview copy';
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(12px, 4vw, 56px);
+}
+
+.aspire-case-study__card + .aspire-case-study__card,
+.aspire-case-study__app {
+  border-top: 1px solid var(--aspire-rule);
+  padding-top: clamp(28px, 4vw, 64px);
+}
+
+.aspire-case-study__card--hrms {
+  --card-accent: var(--aspire-green);
+}
+
+.aspire-case-study__card--crm {
+  --preview-offset: 20px;
+  grid-template-areas: 'copy preview';
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.aspire-case-study__preview {
+  grid-area: preview;
+}
+
+.aspire-case-study__dashboard-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1600 / 1131;
+  border-radius: 12px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.aspire-case-study__dashboard-image--hrms {
+  clip-path: inset(3.6% 3.5% .6% 3.6% round 2.5% / 3.5%);
+}
+
+.aspire-case-study__dashboard-image--crm {
+  clip-path: inset(4.7% 1.8% .8% 2.4% round 2.7% / 3.8%);
+}
+
+.aspire-case-study__dashboard-image--document {
+  clip-path: inset(3.1% 4.25% 1.8% 4.3% round 2.7% / 4.8%);
+}
+
+.aspire-case-study__view-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.aspire-case-study__view-switch button {
+  min-height: 44px;
+  padding-inline: 14px;
+  border: 1px solid #b9d7f3;
+  border-radius: 999px;
+  color: var(--aspire-blue);
+  font-size: .875rem;
+  font-weight: 700;
+  transition: background-color 160ms, border-color 160ms, color 160ms;
+}
+
+.aspire-case-study__view-switch button:hover {
+  background: #deefff;
+}
+
+.aspire-case-study__view-switch button[aria-pressed='true'] {
+  border-color: var(--aspire-blue);
+  background: var(--aspire-blue);
+  color: #fff;
+}
+
+.aspire-case-study__card-copy {
+  grid-area: copy;
+  max-width: 43ch;
+}
+
+.aspire-case-study__card-copy::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: var(--card-accent);
+  transform-origin: left;
+}
+
+.aspire-case-study__card :is(h2, h3) {
+  color: var(--card-accent);
+  font-size: clamp(1.2rem, 2.25vw, 2rem);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -.035em;
+}
+
+.aspire-case-study__card p {
+  margin-top: 12px;
+  color: #364359;
+  font-size: clamp(.95rem, 1.35vw, 1.13rem);
+  line-height: 1.6;
+}
+
+.aspire-case-study__app {
+  margin-top: clamp(32px, 5vw, 72px);
+}
+
+.aspire-case-study__app .aspire-case-study__dashboard-image {
+  aspect-ratio: 3 / 2;
+}
+
+.aspire-case-study__software .aspire-case-study__dashboard-image {
+  aspect-ratio: auto;
+}
+
+.aspire-case-study__app-features {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding-inline-start: 1.25em;
+  list-style: disc;
+  color: #364359;
+  font-size: clamp(.86rem, 1.2vw, 1rem);
+  line-height: 1.5;
+}
+
+.aspire-case-study__app-features li::marker {
+  color: var(--aspire-green);
+}
+
+.aspire-case-study__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin-top: clamp(32px, 5vw, 72px);
+  padding-top: clamp(20px, 3vw, 40px);
+  border-top: 1px solid var(--aspire-rule);
+}
+
+.aspire-case-study__enquiry {
+  background: var(--aspire-green);
+  color: #fff;
+  transition: background-color 160ms;
+}
+
+.aspire-case-study__enquiry:hover {
+  background: #0e5936;
+}
+
+.aspire-case-study__visit {
+  color: var(--aspire-orange);
+}
+
+.aspire-case-study :is(a, button):focus-visible {
+  outline: 2px solid var(--aspire-blue);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .aspire-case-study__card:is(:hover, :focus-within) .aspire-case-study__card-copy::before {
+    transform: scaleX(1.65);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .aspire-case-study__card .aspire-case-study__dashboard-image {
+    transition: scale 280ms ease-out, translate 280ms ease-out;
+  }
+
+  .aspire-case-study__card-copy::before {
+    transition: transform 260ms ease-out;
+  }
+
+  .aspire-case-study__card:is(:hover, :focus-within) .aspire-case-study__dashboard-image {
+    translate: 0 -4px;
+    scale: 1.015;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .aspire-case-study__section-intro,
+    .aspire-case-study__card-copy {
+      animation: aspire-scroll-copy auto cubic-bezier(.2, .65, .3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 95%;
+    }
+
+    .aspire-case-study__preview {
+      animation: aspire-scroll-preview auto cubic-bezier(.2, .65, .3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 75%;
+    }
+
+    .aspire-case-study__card:focus-within :is(.aspire-case-study__preview, .aspire-case-study__card-copy) {
+      animation: none;
+    }
+  }
+}
+
+@keyframes aspire-scroll-copy {
+  from {
+    opacity: .55;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aspire-scroll-preview {
+  from {
+    opacity: .55;
+    transform: translate(var(--preview-offset), 16px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 920px) {
+  .aspire-case-study__hero {
+    min-height: 0;
+    aspect-ratio: auto;
+    background: linear-gradient(110deg, #f6fbff, #dff2fd);
+  }
+  .aspire-case-study__hero-copy { width: 100%; padding: 22px 22px 12px; }
+  .aspire-case-study__hero h1 {
+    max-width: 17ch;
+    margin-top: 24px;
+  }
+  .aspire-case-study__intro { max-width: 45ch; }
+  .aspire-case-study__hero-artwork {
+    position: static;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .aspire-case-study__card {
+    --preview-offset: 0px;
+    grid-template-areas: 'preview' 'copy';
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}

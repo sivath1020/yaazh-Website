@@ -1,0 +1,4 @@
+Tool: built-in image_gen (image edit).
+Edit target: member4.jpg (Rashiban).
+Use case: identity-preserve / background-extraction.
+Create a high resolution clean photographic cutout for his existing team website portrait. Preserve exactly his face identity, skin tone, glasses, hairstyle, head turned to the right, black T-shirt, crossbody tan bag strap, wristwatch, and body proportions/pose. Improve clarity and reduce compression artifacts without beautifying or redesigning his face. Remove only the wall and green background. Transparent alpha background, no shadow, no new objects or text. Frame head through upper thighs like source, subject centered with minimal transparent margins. Sharp natural detail.
