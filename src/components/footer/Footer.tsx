@@ -14,7 +14,7 @@ const QUICK_LINKS = [
   { label: 'Services', path: '/services' },
   { label: 'Work', path: '/work' },
   { label: 'Careers', path: '/careers' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Contact Us', path: '/contact' },
 ];
 const SERVICES = [
   { label: 'Custom Software & ERP', path: '/software-development-coimbatore' },

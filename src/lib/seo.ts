@@ -78,10 +78,10 @@ export const SEO_PAGES = {
     changefreq: 'monthly',
   },
   '/contact': {
-    title: 'Contact Yaazh 360 Digitech | Coimbatore',
-    description: 'Discuss your digital marketing, website, mobile app or software project with Yaazh 360 Digitech in Peelamedu, Coimbatore. Call +91 90470 44440.',
+    title: 'Contact Us | Yaazh 360 Digitech Coimbatore',
+    description: 'Get in touch with Yaazh 360 Digitech in Peelamedu, Coimbatore for digital marketing, website and custom software projects. Call +91 90470 44440.',
     keywords: 'contact Yaazh 360, digital marketing enquiry Coimbatore, hire software developers Peelamedu, free marketing audit Coimbatore',
-    label: 'Contact',
+    label: 'Contact Us',
     priority: '0.8',
     changefreq: 'monthly',
   },
@@ -235,6 +235,43 @@ export function getStructuredData(pathname: string) {
         },
         'query-input': 'required name=search_term_string',
       },
+      hasPart: [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/services#webpage`,
+          name: 'Services',
+          url: `${SITE_URL}/services`,
+          description: SEO_PAGES['/services'].description,
+        },
+        {
+          '@type': 'AboutPage',
+          '@id': `${SITE_URL}/about#webpage`,
+          name: 'About Us',
+          url: `${SITE_URL}/about`,
+          description: SEO_PAGES['/about'].description,
+        },
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/work#webpage`,
+          name: 'Our Work',
+          url: `${SITE_URL}/work`,
+          description: SEO_PAGES['/work'].description,
+        },
+        {
+          '@type': 'ContactPage',
+          '@id': `${SITE_URL}/contact#webpage`,
+          name: 'Contact Us',
+          url: `${SITE_URL}/contact`,
+          description: 'Get in touch with Yaazh 360 Digitech in Peelamedu, Coimbatore for digital marketing, website and custom software projects. Call +91 90470 44440.',
+        },
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/careers#webpage`,
+          name: 'Careers',
+          url: `${SITE_URL}/careers`,
+          description: SEO_PAGES['/careers'].description,
+        },
+      ],
     },
     {
       '@type': page.path === '/about' ? 'AboutPage' : page.path === '/contact' ? 'ContactPage' : 'WebPage',
@@ -308,6 +345,49 @@ export function getStructuredData(pathname: string) {
             '@type': 'Answer',
             text: 'Simply reach out through our contact form. Our strategists will audit your digital footprint and provide a tailored growth roadmap and transparent quote within 48 hours.',
           },
+        },
+      ],
+    });
+
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${SITE_URL}/#sitelinks`,
+      name: 'Key Pages',
+      itemListElement: [
+        {
+          '@type': 'SiteNavigationElement',
+          position: 1,
+          name: 'Services',
+          description: SEO_PAGES['/services'].description,
+          url: `${SITE_URL}/services`,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 2,
+          name: 'About Us',
+          description: SEO_PAGES['/about'].description,
+          url: `${SITE_URL}/about`,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 3,
+          name: 'Our Work',
+          description: SEO_PAGES['/work'].description,
+          url: `${SITE_URL}/work`,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 4,
+          name: 'Contact Us',
+          description: SEO_PAGES['/contact'].description,
+          url: `${SITE_URL}/contact`,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 5,
+          name: 'Careers',
+          description: SEO_PAGES['/careers'].description,
+          url: `${SITE_URL}/careers`,
         },
       ],
     });
