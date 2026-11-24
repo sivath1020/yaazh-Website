@@ -99,6 +99,17 @@ nginx_conf = """server {
         try_files $uri =404;
     }
 
+    # Favicons & Icons - Short cache so Googlebot & browsers update immediately
+    location ~ ^/(favicon.*|apple-touch-icon.*)\\.(?:png|ico|svg)$ {
+        expires 1d;
+        add_header Cache-Control "public, max-age=86400, must-revalidate";
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        try_files $uri =404;
+    }
+
     # Static Asset Performance Caching
     location ~* \\.(?:css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|woff|woff2|webp)$ {
         expires 1y;
