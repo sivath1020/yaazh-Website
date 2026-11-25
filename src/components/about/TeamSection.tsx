@@ -6,8 +6,6 @@ import member3 from '../../assets/team/karthikeyan-photo.optimized.webp';
 import member4 from '../../assets/team/rashiban-cutout-hd.optimized.webp';
 import member5 from '../../assets/team/sivath-cutout-hd.optimized.webp';
 import member6 from '../../assets/team/naveen-photo.optimized.webp';
-import cutoutsFirst from '../../assets/team/team-cutouts-1.optimized.webp';
-import cutoutsSecond from '../../assets/team/team-cutouts-2.optimized.webp';
 import karthikeyanCutout from '../../assets/team/karthikeyan-cutout.optimized.webp';
 import vijayCutout from '../../assets/team/vijay-cutout.optimized.webp';
 import naveenCutout from '../../assets/team/naveen-cutout.optimized.webp';
@@ -32,7 +30,7 @@ const portraitStyle = (index: number): React.CSSProperties => index === 2
   ? { backgroundImage: `url(${member4})`, backgroundPosition: 'center top', backgroundSize: '100% auto' }
   : index === 4
   ? { backgroundImage: `url(${member5})`, backgroundPosition: 'center top', backgroundSize: '100% auto' }
-  : { backgroundImage: `url(${index < 3 ? cutoutsFirst : cutoutsSecond})`, backgroundPosition: `${(index % 3) * 50}% top` };
+  : { backgroundImage: `url(${member1})` };
 
 export const TeamSection: React.FC = () => (
   <section id="our-team" className="team-editorial" aria-labelledby="our-team-title">
@@ -43,7 +41,7 @@ export const TeamSection: React.FC = () => (
     </header>
     <div className="team-editorial__roster">
       {TEAM_MEMBERS.map((member, index) => (
-        <article key={member.image} className={`team-editorial__member${index % 2 ? ' team-editorial__member--reverse' : ''}`} aria-label={`Team member ${index + 1}: ${member.name}`}>
+        <article key={member.image} className={`team-editorial__member${index % 2 ? ' team-editorial__member--reverse' : ''}${member.portraitIndex === 0 ? ' team-editorial__member--karan' : ''}`} aria-label={`Team member ${index + 1}: ${member.name}`}>
           <div className="team-editorial__band">
             <div className="team-editorial__backdrop" aria-hidden="true"
               style={portraitStyle(member.portraitIndex)} />

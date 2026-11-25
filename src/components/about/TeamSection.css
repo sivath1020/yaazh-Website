@@ -17,11 +17,33 @@
 .team-editorial__member--reverse { --team-ink: #78614d; }
 .team-editorial__band { position: absolute; inset: 0 -1%; overflow: hidden; background: #bdc9d3; border-block: .48cqw solid var(--team-ink); transform: skewY(-6deg); z-index: -1; }
 .team-editorial__member--reverse .team-editorial__band { background: #d5cbbd; }
-.team-editorial__backdrop { width: 55cqw; height: 70cqw; position: absolute; top: -3cqw; left: 35%; background-size: 300% auto; background-repeat: no-repeat; opacity: .23; filter: grayscale(1); transform: skewY(6deg); mask-image: linear-gradient(90deg, transparent, #000 25%, #000 70%, transparent); }
+.team-editorial__backdrop { width: 55cqw; height: 70cqw; position: absolute; top: -3cqw; left: 35%; background-repeat: no-repeat; opacity: .23; filter: grayscale(1); transform: skewY(6deg); mask-image: linear-gradient(90deg, transparent, #000 25%, #000 70%, transparent); }
 .team-editorial__member--reverse .team-editorial__backdrop { left: 24%; }
 .team-editorial__content { position: relative; height: 100%; }
 .team-editorial__portrait-slot { position: absolute; width: 36cqw; height: 45cqw; left: 0; bottom: -5.35cqw; z-index: 2; overflow: hidden; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.78cqw), 0 100%); }
-.team-editorial__portrait { width: 100%; height: 100%; background-repeat: no-repeat; background-size: 300% auto; filter: drop-shadow(.6cqw .4cqw .45cqw #17253c20); }
+.team-editorial__portrait { width: 100%; height: 100%; background-repeat: no-repeat; filter: drop-shadow(.6cqw .4cqw .45cqw #17253c20); }
+/* Frame Karan's source photo as a cutout at the photo's original aspect ratio. */
+.team-editorial__member--karan :is(.team-editorial__portrait, .team-editorial__backdrop) { background-size: 0; }
+.team-editorial__member--karan :is(.team-editorial__portrait, .team-editorial__backdrop)::before {
+  content: '';
+  display: block;
+  width: 91%;
+  aspect-ratio: 682 / 1024;
+  margin-inline: auto;
+  transform: translateY(-8%);
+  background-image: inherit;
+  background-size: 100% 100%;
+  clip-path: polygon(
+    0% 76%, 1.2% 68.4%, 3.8% 64.3%, 10.6% 60.2%, 16.7% 57.6%, 23.8% 55.3%, 27.9% 53.5%,
+    31.7% 53.9%, 38.7% 52.5%, 40.2% 50%, 38.1% 48.2%, 35.5% 46.9%, 37% 45.3%, 37% 42.2%,
+    36.1% 38.9%, 34% 38.3%, 32.8% 37.1%, 32% 34.6%, 32% 30.9%, 29.6% 29.5%, 28.4% 27.1%,
+    28.2% 24.8%, 27.6% 23%, 28.4% 20.3%, 30.5% 18%, 33.4% 15.4%, 36.7% 13.9%, 41.1% 11.7%,
+    45.7% 10.7%, 50.1% 10%, 54.3% 9.6%, 59.5% 10.2%, 63.6% 10.9%, 67.2% 12.7%, 71.3% 15%,
+    73.9% 17%, 75.4% 19.7%, 76.2% 21.5%, 76% 24.6%, 74.2% 27.1%, 72.4% 29.5%, 73.6% 31.3%,
+    73.6% 35%, 71% 37.3%, 68.9% 38.5%, 67.2% 43.8%, 66% 47.1%, 66.3% 52.1%, 69.5% 53.3%,
+    77.4% 54.9%, 84.2% 56.8%, 90.6% 59.6%, 95.3% 61.9%, 98.2% 64.8%, 100% 68.9%, 100% 100%, 0% 100%
+  );
+}
 /* Leave the preceding card clear while keeping portraits above their own strip. */
 .team-editorial__member:not(:first-child):not(.team-editorial__member--reverse) .team-editorial__portrait-slot { height: 39cqw; }
 .team-editorial__name { position: absolute; left: 32%; top: 6cqw; width: 32%; color: var(--team-ink); z-index: 3; transform: rotate(-6deg); }
