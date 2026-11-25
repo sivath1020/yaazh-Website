@@ -1,5 +1,6 @@
 import instagramIcon from '../assets/social media icons/instagram.png';
 import facebookIcon from '../assets/social media icons/facebook.png';
+import linkedinIcon from '../assets/social media icons/linkedin.png';
 import whatsappIcon from '../assets/social media icons/whatsapp.png';
 
 export interface SocialLink {
@@ -22,6 +23,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: 'https://www.facebook.com/share/1FtMZopZtX/?mibextid=wwXIfr',
     icon: facebookIcon,
     label: 'Follow Yaazh 360 Digitech on Facebook',
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/yaazh360digitech',
+    icon: linkedinIcon,
+    label: 'Follow Yaazh 360 Digitech on LinkedIn',
   },
   {
     name: 'WhatsApp',

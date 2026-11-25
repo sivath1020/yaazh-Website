@@ -23,10 +23,8 @@
 .editorial-footer__contact h3 { margin-bottom: 11px; }
 .editorial-footer__contact .editorial-footer__phone { color: var(--footer-accent); }
 .editorial-footer__contact address { font-style: normal; }
-.editorial-footer__social { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
-.editorial-footer__social-link { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: #fff; border: 1px solid #dfd8cc; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
-.editorial-footer__social-link:hover { transform: translateY(-2px); border-color: var(--footer-accent); box-shadow: 0 4px 12px rgba(0, 82, 204, .14); }
-.editorial-footer__social-link img { width: 22px; height: 22px; object-fit: contain; display: block; }
+.editorial-footer__social { margin-top: 8px; flex-wrap: nowrap; gap: 10px; }
+.editorial-footer__social .social-links-row__item img { width: clamp(32px, 2.4vw, 42px) !important; height: clamp(32px, 2.4vw, 42px) !important; }
 .editorial-footer__expertise > a { display: flex; align-items: baseline; gap: 15px; margin-bottom: 25px; }
 .editorial-footer__expertise > a > span:first-child { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(31px, 2.7vw, 49px); font-weight: 700; color: var(--footer-accent); line-height: 1; }
 .editorial-footer__brand { display: block; width: min(1000px, 76%); margin: 80px auto 66px; }
@@ -60,6 +58,7 @@
   .editorial-footer__expertise { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
   .editorial-footer__expertise h3 { grid-column: 1 / -1; }
   .editorial-footer__expertise > a { gap: 10px; margin-bottom: 0; flex-direction: column; align-items: center; }
+  .editorial-footer__social { grid-column: 1 / -1; justify-content: center; margin-top: 20px; }
   .editorial-footer__brand { width: 100%; margin-block: 34px; }
   .editorial-footer__bottom { flex-direction: column; text-align: center; gap: 12px; font-size: 10px; padding-block: 18px; }
   .editorial-footer__bottom > p { width: 100%; }
