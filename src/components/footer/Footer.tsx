@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import brandLogo from '../../assets/Logo/yaazh-logo-footer-hd.optimized.webp';
+import { SOCIAL_LINKS } from '../../lib/socialLinks';
 import './Footer.css';
 
 interface FooterProps {
@@ -67,6 +68,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact: _onOp
             <a href="mailto:yaazh360digitech@gmail.com">yaazh360digitech@gmail.com</a>
             <address>Peelamedu, Avinashi Rd<br />Coimbatore, Tamil Nadu 641014</address>
             <p>Monday–Saturday<br />9:00 AM–7:00 PM IST</p>
+            <div className="editorial-footer__social" aria-label="Social media">
+              {SOCIAL_LINKS.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  title={item.name}
+                  className="editorial-footer__social-link"
+                >
+                  <img src={item.icon} alt={item.name} width={22} height={22} loading="lazy" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <nav className="editorial-footer__column editorial-footer__expertise" aria-label="Our expertise">

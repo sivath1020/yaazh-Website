@@ -157,6 +157,10 @@ export function getStructuredData(pathname: string) {
       description: SEO_PAGES['/'].description,
       telephone: '+919047044440',
       email: 'yaazh360digitech@gmail.com',
+      sameAs: [
+        'https://www.instagram.com/yaazh360digitech?utm_source=ig_web_button_share_sheet&evlk=ZDNlZDc0MzIxNw==',
+        'https://www.facebook.com/share/1FtMZopZtX/?mibextid=wwXIfr',
+      ],
       priceRange: '₹₹',
       currenciesAccepted: 'INR',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer, UPI',

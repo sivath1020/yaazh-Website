@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 import { sendContactEnquiry } from '../lib/web3forms';
+import { SOCIAL_LINKS } from '../lib/socialLinks';
 
 interface ContactPageProps {
   defaultService?: string;
@@ -258,6 +259,26 @@ export const ContactPage: React.FC<ContactPageProps> = ({ defaultService, onNavi
                   Avinashi Road, Peelamedu,<br />
                   Coimbatore, Tamil Nadu &mdash; 641014
                 </address>
+              </div>
+
+              {/* Block 4: Connect With Us */}
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-[#111111] mb-2">Connect with us</h3>
+                <div className="flex items-center gap-3">
+                  {SOCIAL_LINKS.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.label}
+                      title={item.name}
+                      className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-neutral-200 shadow-xs hover:border-[#0A65DB] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                    >
+                      <img src={item.icon} alt={item.name} width={24} height={24} className="w-6 h-6 object-contain" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
