@@ -26,7 +26,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/yaazh360digitech',
+    href: 'https://www.linkedin.com/company/yaazh-360-digitech/',
     icon: linkedinIcon,
     label: 'Follow Yaazh 360 Digitech on LinkedIn',
   },

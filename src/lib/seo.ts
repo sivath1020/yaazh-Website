@@ -160,6 +160,7 @@ export function getStructuredData(pathname: string) {
       sameAs: [
         'https://www.instagram.com/yaazh360digitech?utm_source=ig_web_button_share_sheet&evlk=ZDNlZDc0MzIxNw==',
         'https://www.facebook.com/share/1FtMZopZtX/?mibextid=wwXIfr',
+        'https://www.linkedin.com/company/yaazh-360-digitech/',
       ],
       priceRange: '₹₹',
       currenciesAccepted: 'INR',
